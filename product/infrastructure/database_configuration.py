@@ -8,7 +8,7 @@ import logging
 
 class DatabaseConfiguration:
     _instance = None
-    DATABASE_URL = "postgresql://fuwwwedk:iQI9R3F0DBl11hpj62eqMQPuivaabajb@suleiman.db.elephantsql.com/fuwwwedk"
+    DATABASE_URL = "XXXXXXXXXXXXXXXXXX"
 
     def __new__(cls):
         """
