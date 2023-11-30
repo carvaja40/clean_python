@@ -1,5 +1,3 @@
-# src/product/infrastructure/database.py
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import OperationalError
@@ -8,7 +6,8 @@ import logging
 
 class DatabaseConfiguration:
     _instance = None
-    DATABASE_URL = "XXXXXXXXXXXXXXXXXX"
+
+    DATABASE_URL = "XXXXX"
 
     def __new__(cls):
         """
@@ -30,8 +29,8 @@ class DatabaseConfiguration:
         """
         logging.info("DatabaseConfiguration::_initialize::start")
         logging.info(self.DATABASE_URL)
-        self.engine = create_engine(self.DATABASE_URL)
-        logging.info("create_engine")
+        self.engine = create_engine(self.DATABASE_URL, pool_size=20, max_overflow=0)
+        logging.info("create_engine::end")
         self.session_maker = sessionmaker(autocommit=False, autoflush=False, bind=self.engine)
         logging.info("DatabaseConfiguration::_initialize::end")
 
@@ -44,3 +43,4 @@ class DatabaseConfiguration:
         """
         logging.info("DatabaseConfiguration::get_session::start")
         return self.session_maker()
+

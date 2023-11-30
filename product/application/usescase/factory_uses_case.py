@@ -1,5 +1,9 @@
 from product.application.usescase.create_product_use_case import CreateProductUseCase
 from product.application.usescase.create_product_use_case_impl import CreateProductUseCaseImpl
+from product.application.usescase.list_product_use_case import ListProductUseCase
+from product.application.usescase.list_product_use_case_impl import ListProductImplUseCase
+from product.application.usescase.update_product_use_case import UpdateProductUseCase
+from product.application.usescase.update_product_use_case_impl import UpdateProductUseCaseImpl
 from product.infrastructure.persistence.product_repository import ProductRepository
 
 
@@ -11,6 +15,20 @@ class FactoryUsesCase:
     @staticmethod
     def create_product_use_case(product_repository: ProductRepository) -> CreateProductUseCase:
         """
-        Method to create  Product Use Case Impl
+        Method to create Product Use Case Impl
         """
         return CreateProductUseCaseImpl(product_repository)
+
+    @staticmethod
+    def list_product_use_case(product_repository: ProductRepository) -> ListProductUseCase:
+        """
+        Method to get a list the products.
+        """
+        return ListProductImplUseCase(product_repository)
+
+    @staticmethod
+    def update_product_use_case(product_repository: ProductRepository) -> UpdateProductUseCase:
+        return UpdateProductUseCaseImpl(product_repository)
+
+
+
