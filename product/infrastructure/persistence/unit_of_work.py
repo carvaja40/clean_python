@@ -1,5 +1,5 @@
 import logging
-from product.infrastructure.factory_infra import InfraFactory
+from product.infrastructure.factory.factory_infra import InfraFactory
 
 
 class UnitOfWork:

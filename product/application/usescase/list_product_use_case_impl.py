@@ -1,6 +1,6 @@
-from product.application.usescase.list_product_use_case import ListProductUseCase
+from product.application.interface.list_product_use_case import ListProductUseCase
 from product.domain.model.product import Product
-from product.infrastructure.persistence.product_repository import ProductRepository
+from product.application.repository.product_repository import ProductRepository
 from typing import List
 
 

@@ -1,10 +1,10 @@
-from product.application.usescase.create_product_use_case import CreateProductUseCase
+from product.application.interface.create_product_use_case import CreateProductUseCase
 from product.application.usescase.create_product_use_case_impl import CreateProductUseCaseImpl
-from product.application.usescase.list_product_use_case import ListProductUseCase
+from product.application.interface.list_product_use_case import ListProductUseCase
 from product.application.usescase.list_product_use_case_impl import ListProductImplUseCase
-from product.application.usescase.update_product_use_case import UpdateProductUseCase
+from product.application.interface.update_product_use_case import UpdateProductUseCase
 from product.application.usescase.update_product_use_case_impl import UpdateProductUseCaseImpl
-from product.infrastructure.persistence.product_repository import ProductRepository
+from product.application.repository.product_repository import ProductRepository
 
 
 class FactoryUsesCase:

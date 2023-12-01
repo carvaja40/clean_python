@@ -1,6 +1,6 @@
 import logging
 from fastapi import APIRouter, Depends, HTTPException
-from product.application.usescase.factory_uses_case import FactoryUsesCase
+from product.application.factory.factory_uses_case import FactoryUsesCase
 from product.domain.model.product import Product
 from product.infrastructure.persistence.factory_repository import get_product_repository
 from product.infrastructure.persistence.unit_of_work import UnitOfWork

@@ -1,4 +1,4 @@
-from product.infrastructure.persistence.product_repository import ProductRepository
+from product.application.repository.product_repository import ProductRepository
 from product.infrastructure.persistence.product_repository_imp import ProductRepositoryImp
 
 

@@ -1,8 +1,6 @@
-from abc import ABC
-
-from product.application.usescase.update_product_use_case import UpdateProductUseCase
+from product.application.interface.update_product_use_case import UpdateProductUseCase
 from product.domain.model.product import Product
-from product.infrastructure.persistence.product_repository import ProductRepository
+from product.application.repository.product_repository import ProductRepository
 
 
 class UpdateProductUseCaseImpl(UpdateProductUseCase):

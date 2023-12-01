@@ -1,4 +1,4 @@
-from product.infrastructure.database_configuration import DatabaseConfiguration
+from product.infrastructure.db_config.database_configuration import DatabaseConfiguration
 
 """
 """

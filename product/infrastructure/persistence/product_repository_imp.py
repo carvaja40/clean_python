@@ -1,7 +1,7 @@
 # infrastructure/persistence/ProductRepository.py
 
 from product.domain.model.product import Product
-from product.infrastructure.persistence.product_repository import ProductRepository
+from product.application.repository.product_repository import ProductRepository
 from product.infrastructure.entity.product_entity import ProductEntity
 from sqlalchemy.exc import SQLAlchemyError
 from typing import List

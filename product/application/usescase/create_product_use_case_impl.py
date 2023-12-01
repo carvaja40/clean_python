@@ -1,6 +1,6 @@
-from product.application.usescase.create_product_use_case import CreateProductUseCase
+from product.application.interface.create_product_use_case import CreateProductUseCase
 from product.domain.model.product import Product
-from product.infrastructure.persistence.product_repository import ProductRepository
+from product.application.repository.product_repository import ProductRepository
 
 """
     Use case to representation the functionality the Products
