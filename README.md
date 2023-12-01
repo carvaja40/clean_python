@@ -5,3 +5,6 @@ This is a template project for creating clean architecture applications using th
 ## Getting Started
 
 To get started, clone the repository and install the dependencies:
+
+
+![Diagram](cleanArchitec.drawio.png)
